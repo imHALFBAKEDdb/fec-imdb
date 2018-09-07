@@ -4,7 +4,6 @@ const { db } = require("./index.js");
 
 let insertInDB = data => {
   data.forEach(mov => {
-    console.log(mov);
     new Movie({
       id: mov.imdbID,
       title: mov.Title,
