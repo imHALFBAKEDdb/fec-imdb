@@ -31,13 +31,23 @@ class Review extends React.Component {
   }
 
   render() {
+    let total = [];
+    let tinystars = number => {
+      for(let i = 0; i < number; i++){
+        total.push(<span key={"star_"+i} className="fa fa-star" />)
+      }
+    };
+    tinystars(this.state.review.review_average)
     return (
       <div className={styles.container}>
         <div className={styles.reviewbody}>
           <h2 className={styles.header}>User reviews</h2>
           <div className={styles.userreview}>
             <div className={styles.starbar}>
-              {this.state.review.review_average}{" "}
+              {total.map(star => {
+                return star;
+              })}{" "}
+              {this.state.review.review_average} / 10{" "}
               <strong>{this.state.review.review_title}</strong>
             </div>
             <div className={styles.userline}>
@@ -62,7 +72,8 @@ class Review extends React.Component {
             </button>{" "}
             <button className={styles.btnno} value="no">
               No
-            </button>{" | "}
+            </button>
+            {" | "}
             <a className={styles.report}>Report this</a>
           </div>
           <a className={styles.reviewthis}>Review this title | </a>
