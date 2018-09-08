@@ -38,6 +38,7 @@ const MovieSchema = new Schema({
   crazyCredits: String, 
   connections: String,
   soundtracks: Array,
+  faq: Array,
 });
 
 const Movie = db.model('Movie', MovieSchema);

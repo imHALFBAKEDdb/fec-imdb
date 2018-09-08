@@ -22,6 +22,7 @@ li {
   flex-shrink: 0;
   justify-content: flex-start;
   border-bottom: 0.5px dashed black;
+  border-right: 2px solid grey;
 }
 
 .root {

@@ -4,6 +4,10 @@
   composes: section-container from './App.css';
 }
 
+.container div:last-child {
+  border-bottom: none;
+}
+
 .details-section {
   composes: details-section from './App.css';
   flex-direction: column;

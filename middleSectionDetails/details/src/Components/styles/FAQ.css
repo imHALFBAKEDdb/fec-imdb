@@ -23,3 +23,20 @@
 .footer-link {
   composes: footer-link from './App.css';
 }
+
+.question-section {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.question-mark {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  padding: 0px 8px 0px 0px; 
+}
+
+.questions-container div:nth-child(odd) {
+  background-color: #eeeeee;
+}
