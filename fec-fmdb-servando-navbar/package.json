@@ -1,0 +1,32 @@
+{
+  "name": "fec-fmdb",
+  "version": "1.0.0",
+  "description": "suggested search module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server",
+    "build": "webpack -w",
+    "setup": "node ./database/setup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "NONE",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.8",
+    "nodemon": "^1.18.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack": "^4.17.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0"
+  }
+}
