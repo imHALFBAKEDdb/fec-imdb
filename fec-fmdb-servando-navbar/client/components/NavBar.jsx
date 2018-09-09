@@ -25,83 +25,87 @@ const NavBar = () => {
               <option>Keywords</option>
               <option>Advanced Search »</option>
             </select>
+            <button className={styles.searchbutton}> </button>
           </form>
+          <div className={styles.megamenu}>
+            <ul className={styles.mainnav}>
+              <li className={styles.spacermain} />
+              <li className={styles.meganavtitle}>
+                <p className={styles.meganavcategory}>
+                  <a>Movies, </a>
+                  <a>TV</a>
+                  <br />
+                  &amp; <a>Showtimes</a>
+                </p>
+              </li>
+              <li className={styles.spacermain} />
+              <li className={styles.meganavtitle}>
+                <p className={styles.meganavcategory}>
+                  <a>Celebs, </a>
+                  <a>Events</a>
+                  <br />
+                  &amp; <a>Photos</a>
+                </p>
+              </li>
+              <li className={styles.spacermain} />
+              <li className={styles.meganavtitle}>
+                <p className={styles.meganavcategory}>
+                  <a>News </a>
+                  &amp;
+                  <br />
+                  <a>Community</a>
+                </p>
+              </li>
+              <li className={styles.spacermain} />
+              <li className={styles.meganavtitle}>
+                <p className={styles.meganavcategory}>
+                  <a>Watchlist</a>
+                </p>
+              </li>
+              <li className={styles.spacermain} />
+            </ul>
+          </div>
         </div>
-      </div>
-      <div className={styles.megamenu}>
-        <ul className={styles.mainnav}>
-          <li className={styles.spacer} />
-          <li className={styles.meganavtitle}>
-            <p className={styles.meganavcategory}>
-              <a>Movies, </a>
-              <a>TV</a>
-              <br />
-              &amp; <a>Showtimes</a>
-            </p>
-          </li>
-          <li className={styles.spacer} />
-          <li className={styles.meganavtitle}>
-            <p className={styles.meganavcategory}>
-              <a>Celebs, </a>
-              <a>Events</a>
-              <br />
-              &amp; <a>Photos</a>
-            </p>
-          </li>
-          <li className={styles.spacer} />
-          <li className={styles.meganavtitle}>
-            <p className={styles.meganavcategory}>
-              <a>News </a>
-              &amp;
-              <br />
-              <a>Community</a>
-            </p>
-          </li>
-          <li className={styles.spacer} />
-          <li className={styles.meganavtitle}>
-            <p className={styles.meganavcategory}>
-              <a>Watchlist</a>
-            </p>
-          </li>
-          <li className={styles.spacer} />
-        </ul>
-      </div>
-      <div className={styles.navextra}>
-        <ul className={styles.navextralist}>
-          <li className={styles.navextraitem}>
-            <img src="https://m.media-amazon.com/images/G/01/imdb/images/navbar/imdbpro_logo_nb-3000473826._CB470041611_.png" />
-          </li>
-          <li className={styles.spacer} />
-          <li className={styles.navextrahelp}>
-            <a>Help</a>
-          </li>
-          <li className={styles.spacer} />
-          <li className={styles.social}>
-            <img
-              className={styles.sociallogo}
-              src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-facebook-5.png&r=255&g=255&b=255"
-            />
-            <img
-              className={styles.sociallogo}
-              src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-twitter-5.png&r=255&g=255&b=255"
-            />
-            <img
-              className={styles.sociallogo}
-              src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2016/png/iconmonstr-instagram-15.png&r=255&g=255&b=255"
-            />
-          </li>
-        </ul>
-      </div>
-      <div className={styles.personal}>
-        <ul className={styles.personallist}>
-          <li className={styles.personalitem}>
-            <img
-              className={styles.personallogo}
-              src="https://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png"
-            />{" "}
-            <a className={styles.personalother}>Other Sign in options</a>
-          </li>
-        </ul>
+        <div className={styles.navextra}>
+          <ul className={styles.navextralist}>
+            <li className={styles.navextraitem}>
+              <img
+                className={styles.imdbpro}
+                src="https://m.media-amazon.com/images/G/01/imdb/images/navbar/imdbpro_logo_nb-3000473826._CB470041611_.png"
+              />
+            </li>
+            <li className={styles.spacerextra} />
+            <li className={styles.navextrahelp}>
+              <a>Help</a>
+            </li>
+            <li className={styles.social}>
+              <img
+                className={styles.sociallogo}
+                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-facebook-5.png&r=255&g=255&b=255"
+              />
+              <img
+                className={styles.sociallogo}
+                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-twitter-5.png&r=255&g=255&b=255"
+              />
+              <img
+                className={styles.sociallogo}
+                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2016/png/iconmonstr-instagram-15.png&r=255&g=255&b=255"
+              />
+            </li>
+          </ul>
+
+          <ul className={styles.personallist}>
+            <li className={styles.personalitem}>
+              <img
+                className={styles.personallogo}
+                src="https://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png"
+              />
+            </li>
+            <li className={styles.personalother}>
+              <a >Other Sign in options</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
