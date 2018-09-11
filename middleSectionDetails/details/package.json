@@ -4,7 +4,7 @@
   "description": "Front end implementation of imdb",
   "main": "./src/server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev-react": "webpack --mode development --watch",
     "dev-server": "webpack-dev-server --open --mode development",
     "build-dev": "webpack --mode development --watch",
@@ -34,14 +34,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
     "babel-plugin-react-css-modules": "^3.4.2",
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "jest": "^23.6.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "regenerator-runtime": "^0.12.1",
     "style-loader": "^0.23.0",
     "webpack-combine-loaders": "^2.0.4",
     "webpack-dev-server": "^3.1.7"
