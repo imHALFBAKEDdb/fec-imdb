@@ -25,7 +25,7 @@ const NavBar = () => {
               <option>Keywords</option>
               <option>Advanced Search »</option>
             </select>
-            <button className={styles.searchbutton}></button>
+            <button className={styles.searchbutton} />
           </form>
           <div className={styles.megamenu}>
             <ul className={styles.mainnav}>
@@ -37,6 +37,40 @@ const NavBar = () => {
                   <br />
                   &amp; <a>Showtimes</a>
                 </p>
+                <div className={styles.dropdowncontent}>
+                  <ul className={styles.ddmovies}>
+                    <li className={styles.ddheader}>MOVIES</li>
+                    <li className={styles.ddoptions}>In Theaters</li>
+                    <li className={styles.ddoptions}>Showtimes & Tickets</li>
+                    <li className={styles.ddoptions}>Latest Trailers</li>
+                    <li className={styles.ddoptions}>Coming Soon</li>
+                    <li className={styles.ddoptions}>Release Calendar</li>
+                    <li className={styles.ddoptions}>Top Rated Movies</li>
+                    <li className={styles.ddoptions}>
+                      Top Rated Indian Movies
+                    </li>
+                    <li className={styles.ddoptions}>Most Popular Movies</li>
+                    <li className={styles.ddheader}>CHARTS & TRENDS</li>
+                    <li className={styles.ddoptions}>Box Office</li>
+                    <li className={styles.ddoptions}>Oscar Winners</li>
+                    <li className={styles.ddoptions}>Most Popular By Genre</li>
+                  </ul>
+                  <ul className={styles.ddtvvideo}>
+                    <li className={styles.ddheader}>TV & VIDEO</li>
+                    <li className={styles.ddoptions}>IMDb TV</li>
+                    <li className={styles.ddoptions}>Top Rated TV Shows</li>
+                    <li className={styles.ddoptions}>Most Popular TV Shows</li>
+                    <li className={styles.ddoptions}>DVD & Blu-Ray</li>
+                    <li className={styles.ddheader}>SPECIAL FEATURES</li>
+                    <li className={styles.ddoptions}>Amazon Originals</li>
+                    <li className={styles.ddoptions}>Summer Movie Guide</li>
+                    <li className={styles.ddoptions}>Horror Guide</li>
+                    <li className={styles.ddoptions}>IMDb Picks</li>
+                    <li className={styles.ddoptions}>Family</li>
+                    <li className={styles.ddoptions}>Video Games</li>
+                    <li className={styles.ddoptions}>Marvel</li>
+                  </ul>
+                </div>
               </li>
               <li className={styles.spacermain} />
               <li className={styles.meganavtitle}>
@@ -46,6 +80,34 @@ const NavBar = () => {
                   <br />
                   &amp; <a>Photos</a>
                 </p>
+                <div className={styles.dropdowncontent}>
+                  <ul className={styles.ddcelebs}>
+                    <li className={styles.ddheader}>CELEBS</li>
+                    <li className={styles.ddoptions}>Born Today</li>
+                    <li className={styles.ddoptions}>Celebrity News</li>
+                    <li className={styles.ddoptions}>Most Popular Celebs</li>
+                    <li className={styles.ddheader}>PHOTOS</li>
+                    <li className={styles.ddoptions}>Latest Stills</li>
+                    <li className={styles.ddoptions}>Latest Posters</li>
+                    <li className={styles.ddoptions}>Photos We Love</li>
+                  </ul>
+                  <ul className={styles.ddevents}>
+                    <li className={styles.ddheader}>EVENTS</li>
+                    <li className={styles.ddoptions}>Awards Central</li>
+                    <li className={styles.ddoptions}>Festival Central</li>
+                    <li className={styles.ddoptions}>Oscars</li>
+                    <li className={styles.ddoptions}>Golden Globes</li>
+                    <li className={styles.ddoptions}>Sundance</li>
+                    <li className={styles.ddoptions}>Cannes</li>
+                    <li className={styles.ddoptions}>Comic-Con</li>
+                    <li className={styles.ddoptions}>Emmy Awards</li>
+                    <li className={styles.ddoptions}>Venice Film Festival</li>
+                    <li className={styles.ddoptions}>Toronto Film Festival</li>
+                    <li className={styles.ddoptions}>Tribeca</li>
+                    <li className={styles.ddoptions}>SXSW</li>
+                    <li className={styles.ddoptions}>All Events</li>
+                  </ul>
+                </div>
               </li>
               <li className={styles.spacermain} />
               <li className={styles.meganavtitle}>
@@ -55,12 +117,41 @@ const NavBar = () => {
                   <br />
                   <a>Community</a>
                 </p>
+                <div className={styles.dropdowncontent}>
+                  <ul className={styles.ddnews}>
+                    <li className={styles.ddheader}>NEWS</li>
+                    <li className={styles.ddoptions}>Top News</li>
+                    <li className={styles.ddoptions}>Movie News</li>
+                    <li className={styles.ddoptions}>TV News</li>
+                    <li className={styles.ddoptions}>Celebrity News</li>
+                    <li className={styles.ddoptions}>Indie News</li>
+                    <li className={styles.ddheader}>COMMUNITY</li>
+                    <li className={styles.ddoptions}>Contributor Zone</li>
+                    <li className={styles.ddoptions}>Polls</li>
+                  </ul>
+                </div>
               </li>
               <li className={styles.spacermain} />
               <li className={styles.meganavtitle}>
                 <p className={styles.meganavcategory}>
                   <a>Watchlist</a>
                 </p>
+                <div className={styles.dropdowncontent}>
+                  <ul className={styles.ddwatchlist}>
+                    <li className={styles.ddheader}>YOUR WATCHLIST</li>
+                    <ul className={styles.ddwatchimg} >
+                      <li className={styles.ddoptions}>
+                        <img src="https://m.media-amazon.com/images/G/01/imdb/images/navbar/watchlist_slot1_logged_out-1670046337._CB470041656_.jpg" />
+                      </li>
+                      <li className={styles.ddoptions}>
+                        <img src="https://m.media-amazon.com/images/G/01/imdb/images/navbar/watchlist_slot2_popular-4090757197._CB470041610_.jpg" />
+                      </li>
+                      <li className={styles.ddoptions}>
+                        <img src="https://m.media-amazon.com/images/G/01/imdb/images/navbar/watchlist_slot3_top250-575799966._CB470041651_.jpg" />
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
               </li>
               <li className={styles.spacermain} />
             </ul>
@@ -102,7 +193,7 @@ const NavBar = () => {
               />
             </li>
             <li className={styles.personalother}>
-              <a >Other Sign in options</a>
+              <a>Other Sign in options</a>
             </li>
           </ul>
         </div>
