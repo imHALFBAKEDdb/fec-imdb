@@ -25,7 +25,7 @@ const NavBar = () => {
               <option>Keywords</option>
               <option>Advanced Search »</option>
             </select>
-            <button className={styles.searchbutton}> </button>
+            <button className={styles.searchbutton}></button>
           </form>
           <div className={styles.megamenu}>
             <ul className={styles.mainnav}>

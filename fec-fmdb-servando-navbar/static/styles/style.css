@@ -35,6 +35,7 @@
 
 :local(.searchbutton){
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnef2T15nHejEEu6lyFFvJrRS7MYIqKvGzZ40KPmsjN3Su4axC);
+  background-size: 27px;
   width: 29px;
   height: 29px;
 }
@@ -81,12 +82,12 @@
 :local(.imdbpro){
   width: 56px;
   height: 16px;
-
 }
 
 :local(.sociallogo){
   width: 31px;
   height: 31px;
+  margin-right: 3px;
 }
 
 :local(.navextra){
