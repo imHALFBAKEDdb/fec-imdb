@@ -54,17 +54,17 @@ class Review extends React.Component {
               <span className={styles.date}>
                 {this.state.review.review_date} |{" "}
               </span>
-              <a className={styles.username}>
+              <a className={styles.username} href="" >
                 by {this.state.review.reviewer} -{" "}
               </a>
-              <a className={styles.userreviews}>See all my reviews</a>
+              <a className={styles.userreviews} href="" >See all my reviews</a>
             </div>
             <div className={styles.reviewtext}>
               <p>{this.state.review.review}</p>
             </div>
           </div>
           <div className={styles.feedback}>
-            {this.state.review.review_likes} of{" "}
+            {this.state.review.reviews_number} of{" "}
             {this.state.review.review_viewers} people found this review helpful.
             Was this review helpful to you?{" "}
             <button className={styles.btnyes} value="yes">
@@ -74,11 +74,11 @@ class Review extends React.Component {
               No
             </button>
             {" | "}
-            <a className={styles.report}>Report this</a>
+            <a className={styles.report} href="" >Report this</a>
           </div>
-          <a className={styles.reviewthis}>Review this title | </a>
-          <a className={styles.seeall}>
-            See all {this.state.reviews_number} user reviews
+          <a className={styles.reviewthis} href="" >Review this title | </a>
+          <a className={styles.seeall} href="" >
+            See all {this.state.review.review_count} user reviews
           </a>
         </div>
       </div>
