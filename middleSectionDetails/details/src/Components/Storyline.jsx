@@ -1,15 +1,25 @@
 import React from 'react';
-import KeyWord from './KeyWord.jsx';
 
+
+import makeEditable from '../utils/editSection';
+import KeyWord from './KeyWord.jsx';
 import styles from './styles/Storyline.css';
 
 // storyline, plotkeywords, taglines, genres, motion picture rating, parents guide
-const Storyline = ({ storyline, plotKeyWords, taglines, genres }) => {
-  console.log(taglines);
+const Storyline = ({ storyline, plotKeyWords, taglines, genres, movieId }) => {
+
+  // movieId, section, headerSectionId, editSectionId, editButtonId, saveButtonId
+  const onEdit = () => {
+    makeEditable(movieId, 'storyline', 'header', 'story-line-text', 'storyline-edit-button', 'storyline-save-button');
+  }
+
   return (
-    <div className={ styles.container }>
-      <h1 className={ styles.heading }>Storyline</h1>
-      <p>
+    <div id="story-line-root" className={ styles.container }>
+      <div id="header" className={ styles.header}>
+        <h1 className={ styles.heading }>Storyline</h1>
+        <button id="storyline-edit-button" type="button" onClick={ onEdit }>Edit</button>
+      </div>
+      <p id="story-line-text">
         { storyline }
       </p>
       <div className={ styles['details-section']}>

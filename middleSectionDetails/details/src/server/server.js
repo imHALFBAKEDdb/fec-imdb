@@ -29,6 +29,20 @@ app.get('/api/movie/:movieId', (req, res) => {
   .catch(err => res.send(JSON.stringify(err)));
 });
 
+// post route for section edits
+app.post('/api/movie/:movieId', (req, res) => {
+  const { movieId } = req.params;
+  const { section, text } = req.body;
+
+  models.editMovie(movieId, section, text)
+    .then(result => {
+      console.log(result);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+});
+
 app.listen(PORT, () => {
   console.log('FMDB listening on ' + PORT);
 });

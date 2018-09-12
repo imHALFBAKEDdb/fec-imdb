@@ -54,7 +54,21 @@ async function getMovie(movieId) {
   }
 };
 
+async function editMovie(movieId, section, text) {
+  //
+  console.log('FROM MODELS', movieId, section, text);
+  try {
+    const result = await Movie.findOneAndUpdate({ id: movieId }, {
+      [section]: text
+    }, { new: true });
+    return result;
+  } catch(err) {
+    return err;
+  }
+}
+
 module.exports = {
   Movie,
   getMovie,
+  editMovie,
 };

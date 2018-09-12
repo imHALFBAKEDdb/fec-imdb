@@ -11,6 +11,11 @@
   font-size: 13px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .heading {
   composes: heading from './App.css';
 }

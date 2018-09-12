@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './styles/BoxOffice.css';
 
 const BoxOffice = ({ budget, openingWeekend, gross, cumulative }) => {

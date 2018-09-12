@@ -41,9 +41,14 @@ export default class App extends React.Component {
         <div className={ styles.root }>
           <div className={ styles.container }>
             <PhotoList urls={ this.state.currentMovie.photos } />
-            <CastList cast={ this.state.currentMovie.cast }/>
+            <CastList 
+              cast={ this.state.currentMovie.cast } 
+              movieId={ this.state.currentMovie.id }
+            />
             <Storyline storyline={ this.state.currentMovie.storyline } plotKeyWords={ this.state.currentMovie.plotKeyWords }
-              taglines={ this.state.currentMovie.taglines } genres={ this.state.currentMovie.genres }
+              taglines={ this.state.currentMovie.taglines } 
+              genres={ this.state.currentMovie.genres }
+              movieId={ this.state.currentMovie.id }
               />
             <Details 
               aKa={ this.state.currentMovie.aKa }
@@ -52,12 +57,14 @@ export default class App extends React.Component {
               releaseDate={ this.state.currentMovie.releaseDate }
               officialSites={ this.state.currentMovie.officialSites }
               filmingLocations={ this.state.currentMovie.filmingLocations }
+              movieId={ this.state.currentMovie.id }
             />
             <BoxOffice
               budget={ this.state.currentMovie.budget }
               openingWeekend= { this.state.currentMovie.openingWeekend } 
               gross={ this.state.currentMovie.gross }
               cumulative= { this.state.currentMovie.cumulative }
+              movieId={ this.state.currentMovie.id }
             />
             <DidYouKnow
               trivia={ this.state.currentMovie.trivia }
@@ -66,8 +73,9 @@ export default class App extends React.Component {
               crazyCredits={ this.state.currentMovie.crazyCredits }
               connections={ this.state.currentMovie.connections }
               soundtracks= { this.state.currentMovie.soundtracks }
+              movieId={ this.state.currentMovie.id }
             />
-            <FAQ questions={ this.state.currentMovie.faq } />
+            <FAQ questions={ this.state.currentMovie.faq } movieId={ this.state.currentMovie.id }/>
             <Footer />
           </div>
         </div> 
