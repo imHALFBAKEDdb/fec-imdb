@@ -1,8 +1,8 @@
-:local(ul){
+:local(ul) {
   list-style: none;
 }
 
-:local(.container){
+:local(.container) {
   display: flex;
   flex-direction: row;
   background-color: black;
@@ -11,36 +11,36 @@
   font-family: Arial;
 }
 
-:local(.weblogo){
+:local(.weblogo) {
   width: 105px;
   height: 50px;
   margin: 16px 22px 15px 20px;
 }
 
-:local(.searchbarinner){
+:local(.searchbarinner) {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
 }
 
-:local(.searchtext){
+:local(.searchtext) {
   width: 435px;
   height: 23px;
 }
 
-:local(.searchdropdown){
+:local(.searchdropdown) {
   width: 138;
   height: 29px;
 }
 
-:local(.searchbutton){
+:local(.searchbutton) {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnef2T15nHejEEu6lyFFvJrRS7MYIqKvGzZ40KPmsjN3Su4axC);
   background-size: 27px;
   width: 29px;
   height: 29px;
 }
 
-:local(.mainnav){
+:local(.mainnav) {
   margin: 0;
   padding: 0;
   display: flex;
@@ -48,7 +48,7 @@
   color: white;
 }
 
-:local(.meganavtitle){
+:local(.meganavtitle) {
   display: flex;
   align-items: center;
   margin-top: 3px;
@@ -57,58 +57,56 @@
   font-size: 16px;
 }
 
-:local(.meganavtitle:hover, .dropdowncontent){
+:local(.meganavtitle:hover, .dropdowncontent) {
   display: flex;
 }
 
-:local(.dropdowncontent){
+:local(.dropdowncontent) {
   display: none;
   position: absolute;
-  /* I set the top margin to 600px to see how they look. I am having trouble positioning each dropdown right under each menu option.  */
-  margin-top: 600px;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  margin-top: 10px;
 }
 
-:local(.dropdowncontent li){
+:local(.dropdowncontent li) {
   font-size: 14px;
   padding: 5px;
   margin-right: 50px;
   text-decoration: none;
-  display: flex;
 }
 
-:local(.ddheader){
+:local(.ddheader) {
   color: burlywood;
   font-weight: 700;
 }
 
-:local(.ddoptions){
+:local(.ddoptions) {
   color: black;
 }
 
-:local(.ddwatchimg){
+:local(.ddwatchimg) {
   display: flex;
   flex-direction: row;
 }
 
-:local(.spacermain){
+:local(.spacermain) {
   height: 36px;
   background-color: #656565;
   width: 2px;
   margin: 4px 5px 2px 5px;
 }
 
-:local(.spacerextra){
+:local(.spacerextra) {
   height: 12px;
   background-color: white;
   width: 1px;
   margin: 3px 20px 3px 20px;
 }
 
-:local(.navextralist){
+:local(.navextralist) {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -116,31 +114,31 @@
   padding: 0;
 }
 
-:local(.imdbpro){
+:local(.imdbpro) {
   width: 56px;
   height: 16px;
 }
 
-:local(.sociallogo){
+:local(.sociallogo) {
   width: 31px;
   height: 31px;
   margin-right: 3px;
 }
 
-:local(.navextra){
+:local(.navextra) {
   display: flex;
-  margin-top: 18px; 
+  margin-top: 18px;
   flex-direction: column;
 }
 
-:local(.navextrahelp){
+:local(.navextrahelp) {
   font-family: Arial;
   font-size: 12px;
   margin-right: 20px;
   color: white;
 }
 
-:local(.personallist){
+:local(.personallist) {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -148,15 +146,14 @@
   padding: 0;
 }
 
-:local(.personallogo){
+:local(.personallogo) {
   width: 120px;
   height: 42px;
 }
 
-:local(.personalother){
+:local(.personalother) {
   font-family: Arial;
   font-size: 12px;
   color: white;
   margin-left: 10px;
 }
-
