@@ -1,14 +1,14 @@
-.container {
+:local(.container) {
   /* border: 1px solid grey;
   padding: 20px; */
   composes: section-container from './App.css';
 }
 
-.container div:last-child {
+:local(.container div:last-child) {
   border-bottom: none;
 }
 
-.details-section {
+:local(.details-section) {
   composes: details-section from './App.css';
   flex-direction: column;
   align-items: flex-start;
@@ -16,18 +16,18 @@
   padding: 15px 0px 15px 0px;
 }
 
-.keyword-section {
+:local(.keyword-section) {
   composes: keyword-section from './App.css';
 }
 
-.keyword-heading {
+:local(.keyword-heading) {
   composes: keyword-heading from './App.css';
 }
 
-.heading { 
+:local(.heading) { 
   composes: heading from './App.css';
 }
 
-.footer-link {
+:local(.footer-link) {
   composes: footer-link from './App.css';
 }
