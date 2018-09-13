@@ -18,7 +18,7 @@
 :local(.container) {
   display: flex;
   flex-direction: column;
-  width: 650px;
+  width: 667px;
   flex-shrink: 0;
   justify-content: flex-start;
   border-bottom: 0.5px dashed black;

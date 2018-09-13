@@ -45,10 +45,17 @@ app.post('/api/movie/:movieId', (req, res) => {
 
 app.get('/api/review/:reviewId', (req, res) => {
   const { reviewId } = req.params;
-  models.getReview({ id: reviewId }, (err, result) => {
-    console.log(result);
-    res.send(JSON.stringify(result));
-  })
+
+  console.log(reviewId);
+  models.getMovieReview(reviewId)
+    .then(result => {
+      console.log(result);
+      res.send(JSON.stringify(result));
+    })
+    .catch(err => {
+      console.log(err);
+      res.send(JSON.stringify(err));
+    })
 });
 
 app.listen(PORT, () => {

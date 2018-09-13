@@ -9,7 +9,7 @@ const FAQ = ({ questions }) => {
       <div className={ styles['questions-container'] }>
         {
           questions.map((question, index) => (
-            <div className={ styles['question-section'] } >
+            <div key={ index } className={ styles['question-section'] } >
               <h4 className={ styles['question-mark'] }>Q: </h4><p>{ question }?</p>
             </div>
           ))

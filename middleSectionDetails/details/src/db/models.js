@@ -43,4 +43,5 @@ module.exports = {
   MovieReview,
   getMovie,
   editMovie,
+  getMovieReview,
 };

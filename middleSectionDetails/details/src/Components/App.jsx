@@ -8,6 +8,7 @@ import BoxOffice from './BoxOffice.jsx';
 import DidYouKnow from './DidYouKnow.jsx';
 import FAQ from './FAQ.jsx';
 import Footer from './Footer.jsx';
+import Review from './Review.jsx';
 
 import styles from './styles/App.css';
 import axios from 'axios';
@@ -75,7 +76,11 @@ export default class App extends React.Component {
               soundtracks= { this.state.currentMovie.soundtracks }
               movieId={ this.state.currentMovie.id }
             />
-            <FAQ questions={ this.state.currentMovie.faq } movieId={ this.state.currentMovie.id }/>
+            <FAQ 
+              questions={ this.state.currentMovie.faq } 
+              movieId={ this.state.currentMovie.id }
+            />
+            <Review />
             <Footer />
           </div>
         </div> 

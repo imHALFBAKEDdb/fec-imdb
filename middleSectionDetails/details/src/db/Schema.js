@@ -41,7 +41,7 @@ const MovieSchema = new Schema({
 });
 
 const MovieReviewSchema = new Schema({
-  id: { type: String, unique: true },
+  id: { type: Number, unique: true },
   movie_title: String,
   reviewer: String,
   review_title: String,
