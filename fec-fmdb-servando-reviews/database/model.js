@@ -9,7 +9,7 @@ let reviewSchema = new mongoose.Schema({
   review_date: String,
   reviews_number: Number,
   review_viewers: Number,
-  review_likes: Number,
+  review_count: Number,
   review_average: Number
 });
 

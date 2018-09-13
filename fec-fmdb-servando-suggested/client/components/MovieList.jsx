@@ -19,8 +19,12 @@ class MovieList extends React.Component {
   fetchAll() {
     axios.get("/movie/suggested").then(data => {
       console.log("Data fetched:", data);
+      let suggested = [];
+      for (let i = 0; i < 10; i++) {
+        suggested.push(data.data[i]);
+      }
       this.setState({
-        data: data.data
+        data: suggested
       });
     });
   }
