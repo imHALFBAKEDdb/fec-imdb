@@ -1,24 +1,24 @@
-.container {
+:local(.container) {
   /* border: 1px solid grey;
   padding: 20px; */
   composes: section-container from './App.css';
 }
 
-.details-section {
+:local(.details-section) {
   composes: details-section from './App.css';
 }
-.keyword-section {
+:local(.keyword-section) {
   composes: keyword-section from './App.css';
 }
 
-.keyword-heading {
+:local(.keyword-heading) {
   composes: keyword-heading from './App.css';
 }
 
-.heading { 
+:local(.heading) { 
   composes: heading from './App.css';
 }
 
-.footer-link {
+:local(.footer-link) {
   composes: footer-link from './App.css';
 }

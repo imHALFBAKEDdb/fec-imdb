@@ -2,7 +2,7 @@ import React from 'react';
 import KeyWord from './KeyWord.jsx';
 import styles from './styles/Details.css';
 
-const Details = ({ details, officialSites, languages, filmingLocations, releaseDate }) => {
+const Details = ({ aKa, officialSites, languages, country, filmingLocations, releaseDate }) => {
   return (
     <div className={ styles.container }>
       <div>
@@ -20,7 +20,7 @@ const Details = ({ details, officialSites, languages, filmingLocations, releaseD
       </div>
  
       <div className={ styles['details-section'] }>
-        <h4 className={ styles['keyword-heading'] }>Country: { details.country }</h4>
+        <h4 className={ styles['keyword-heading'] }>Country: { country }</h4>
       </div>
 
       <div className={ styles['details-section'] }>
@@ -38,7 +38,7 @@ const Details = ({ details, officialSites, languages, filmingLocations, releaseD
       </div>
 
       <div className={ styles['details-section'] }>
-        <h4 className={ styles['keyword-heading'] }>Also Known As: { details.aKa }</h4>
+        <h4 className={ styles['keyword-heading'] }>Also Known As: { aKa }</h4>
       </div>
 
       <div className={ styles['details-section'] }>

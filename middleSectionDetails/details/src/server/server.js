@@ -29,6 +29,35 @@ app.get('/api/movie/:movieId', (req, res) => {
   .catch(err => res.send(JSON.stringify(err)));
 });
 
+// post route for section edits
+app.post('/api/movie/:movieId', (req, res) => {
+  const { movieId } = req.params;
+  const { section, text } = req.body;
+
+  models.editMovie(movieId, section, text)
+    .then(result => {
+      console.log(result);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+});
+
+app.get('/api/review/:reviewId', (req, res) => {
+  const { reviewId } = req.params;
+
+  console.log(reviewId);
+  models.getMovieReview(reviewId)
+    .then(result => {
+      console.log(result);
+      res.send(JSON.stringify(result));
+    })
+    .catch(err => {
+      console.log(err);
+      res.send(JSON.stringify(err));
+    })
+});
+
 app.listen(PORT, () => {
   console.log('FMDB listening on ' + PORT);
 });

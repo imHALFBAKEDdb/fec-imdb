@@ -1,15 +1,19 @@
 const db = require('./db');
+const movies = require('./mockdata/mockMovieData.json');
+const reviews = require('./mockdata/mockMovieReviewData.json');
+const { Movie, MovieReview } = require('./models');
 
-const movies = require('./fakeMovieData.json');
-const Movie = require('./models').Movie;
-
-// console.log(movies);
-movies.forEach(movie => {
-  Movie.create(movie, (err, result) => {
-    if (err) throw err;
-    console.log(result);
-
-    db.connection.close();
-  });
-  // console.log('movie')
+Movie.insertMany(movies, (err, doc) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Movie insert done!');
+    MovieReview.insertMany(reviews, (err, docs) => {
+      if (err) throw err;
+    
+      console.log('Review insert done!');
+      db.connection.close();
+    });
+  }
 });
+
