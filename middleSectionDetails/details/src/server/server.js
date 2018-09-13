@@ -43,6 +43,14 @@ app.post('/api/movie/:movieId', (req, res) => {
     })
 });
 
+app.get('/api/review/:reviewId', (req, res) => {
+  const { reviewId } = req.params;
+  models.getReview({ id: reviewId }, (err, result) => {
+    console.log(result);
+    res.send(JSON.stringify(result));
+  })
+});
+
 app.listen(PORT, () => {
   console.log('FMDB listening on ' + PORT);
 });
