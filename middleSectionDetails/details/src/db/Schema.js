@@ -2,7 +2,7 @@ const db = require('./db');
 const Schema = db.Schema;
 
 const MovieSchema = new Schema({
-  id: Number,
+  id: String,
   title: String,
   cast: Array,
   photos: Array,
@@ -41,7 +41,7 @@ const MovieSchema = new Schema({
 });
 
 const MovieReviewSchema = new Schema({
-  id: { type: Number, unique: true },
+  id: { type: String, unique: true },
   movie_title: String,
   reviewer: String,
   review_title: String,

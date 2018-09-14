@@ -1,7 +1,17 @@
+:global(body) {
+  background-color: #e3e2dd;
+}
+
 :global(p) {
   font-family: Verdana, Arial, sans-serif;
   color: #333;
   font-size: 13px;
+  margin: 0.5em 0 0.75em;
+  line-height: 140%;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 :global(ul) {
@@ -18,11 +28,12 @@
 :local(.container) {
   display: flex;
   flex-direction: column;
-  width: 667px;
+  width: 700px;
   flex-shrink: 0;
   justify-content: flex-start;
   border-bottom: 0.5px dashed black;
   border-right: 2px solid grey;
+  background-color: white;
 }
 
 :local(.root) {
@@ -36,10 +47,6 @@
   color: #424242;
   font: 24px Arial, sans-serif;
   font-weight: normal;
-}
-
-:local(.footer-link) {
-  
 }
 
 :local(.section-container) {
@@ -66,4 +73,8 @@
   font-weight: bold;
   font-family: Verdana, Arial, sans-serif;
   margin: 7px 0px 0px 0px;
+}
+
+:local(.footer-link) {
+  
 }

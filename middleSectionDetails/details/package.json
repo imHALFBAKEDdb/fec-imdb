@@ -71,13 +71,17 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
-      "!**/node_modules/**"
+      "!**/node_modules/**",
+      "!**/mockdata/**",
+      "!**/styles/**",
+      "!**/dist/**"
     ],
     "coverageThreshold": {
-      "global": {
-        "branches": 75,
-        "functions": 75,
-        "lines": 75
+      "./src/Components": {
+        "statements": 65
+      },
+      "./src/db/": {
+        "statements": 65
       }
     }
   }
