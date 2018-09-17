@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 const config = require('../config/config');
 
+console.log(config);
+
 const { host, port, name } = config.db;
 
-mongoose.connect(`mongodb://${host}:${port}/${name}`);
+mongoose.connect(`mongodb://${host}/${name}`);
 
 const db = mongoose.connection;
 db.once('open', () => {

@@ -1,6 +1,6 @@
 const db = require('../db');
-const movies = require('./mockdata/mockMovieData.json');
-const reviews = require('./mockdata/mockMovieReviewData.json');
+const movies = require('../mockdata/mockMovieData.json');
+const reviews = require('../mockdata/mockMovieReviewData.json');
 const { Movie, MovieReview } = require('../models');
 
 Movie.insertMany(movies, (err, doc) => {

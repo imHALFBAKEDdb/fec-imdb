@@ -38,7 +38,7 @@ app.post('/api/movie/:movieId', (req, res) => {
     })
     .catch(err => {
       console.log(err);
-    })
+    });
 });
 
 app.get('/api/review/:reviewId', (req, res) => {

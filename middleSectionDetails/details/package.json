@@ -4,13 +4,13 @@
   "description": "Front end implementation of imdb",
   "main": "./src/server/server.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "jest",
     "react:dev": "webpack --mode development --watch",
     "server:dev": "webpack-dev-server --open --mode development",
     "build:dev": "webpack --mode development --watch",
     "build:prod": "webpack --mode production",
     "start": "nodemon",
-    "load": "node ./src/db/loadData.js"
+    "load": "node ./src/db/utils/loadData.js"
   },
   "repository": {
     "type": "git",

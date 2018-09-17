@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import makeEditable from '../utils/editSection';
 import KeyWord from './KeyWord.jsx';
 import styles from './styles/Storyline.css';
@@ -11,7 +10,7 @@ const Storyline = ({ storyline, plotKeyWords, taglines, genres, movieId }) => {
   // movieId, section, headerSectionId, editSectionId, editButtonId, saveButtonId
   const onEdit = () => {
     makeEditable(movieId, 'storyline', 'header', 'story-line-text', 'storyline-edit-button', 'storyline-save-button');
-  }
+  };
 
   return (
     <div id="story-line-root" className={ styles.container }>

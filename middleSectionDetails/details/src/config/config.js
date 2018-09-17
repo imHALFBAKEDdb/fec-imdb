@@ -1,3 +1,4 @@
+require('dotenv').config();
 const env = process.env.NODE_ENV; // 'dev' or 'test' for config type
 
 const dev = {
@@ -16,7 +17,7 @@ const test = {
 		port: parseInt(process.env.TEST_APP_PORT) || 3000,
 	},
 	db: {
-		host: process.env.TEST_DB_HOST || 'localhost',
+		host: process.env.TEST_DB_HOST || 'mongodb',
 		port: parseInt(process.env.TEST_DB_PORT) || 27017,
 		name: process.env.TEST_DB_NAME || 'test',
 	},
