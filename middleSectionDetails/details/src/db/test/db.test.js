@@ -1,13 +1,19 @@
-const mongoose = require('mongoose');
-const { createMovie, deleteMovie, getMovie, editMovie, getMovieReview, createMovieReview, deleteMovieReview } = require('../src/db/models');
+// const mongoose = require('mongoose');
+const { mongoose, connect, disconnect } = require('./testConfig.js');
+const { createMovie, deleteMovie, getMovie, editMovie, getMovieReview, createMovieReview, deleteMovieReview } = require('../models');
 const axios = require('axios');
 
 const testMovieData = require('./testMovie.json');
 const testMovieReviewData = require('./testMovieReview.json');
 
-beforeAll(() => {
-  return mongoose.connect('mongodb://localhost/fMDB')
-})
+beforeAll((done) => {
+  // return mongoose.connect('mongodb://localhost/fMDB')
+  return connect(done);
+});
+
+afterAll((done) => {
+  return disconnect(done);
+});
 
 describe('db models', () => {
   beforeEach(() => {
