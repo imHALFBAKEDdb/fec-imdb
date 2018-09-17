@@ -14,7 +14,7 @@ const Footer = () => {
         <p>Find showtimes, watch trailers, browse photos, track your Watchlist and rate your favorite movies and TV shows on your phone or tablet!</p>
       </div>
       <div className={ styles['follow-container'] }>
-        <h3 className={ styles['heading'] } >
+        <h3 className={ styles.heading } >
           Follow FMDb on
         </h3>
         <div className={ styles['social-icons-container'] }>

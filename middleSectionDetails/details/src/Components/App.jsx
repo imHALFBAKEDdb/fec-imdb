@@ -18,7 +18,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      mainMovie: null,
+      currentMovie: null,
     };
   }
   componentDidMount() {
@@ -36,7 +36,6 @@ export default class App extends React.Component {
       .catch(err => console.log('ERROR from App', err));
   }
   render() {
-    console.log(styles);
     if (this.state.currentMovie) {
       return (
         <div className={ styles.root }>

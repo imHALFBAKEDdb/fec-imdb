@@ -20,11 +20,22 @@ describe('<App />', () => {
   //   const wrapper = shallow(<App />);
   //   expect(wrapper.find(PhotoList)).to.be.true;
   // });
-  it ('calls componentDidMount', () => {
+  it('calls componentDidMount', () => {
     sinon.spy(App.prototype, 'componentDidMount');
     const wrapper = mount(<App />);
     // expect(App.prototype.componentDidMount).to.have.property('callcount', 1);
     // console.log(App.prototype.componentDidMount.callCount)
     expect(App.prototype.componentDidMount.callCount).toBe(1);
-  })
+  });
+
+  // it('calls componentDidUpdate after fetching inital state', () => {
+  //   sinon.spy(App.prototype, 'componentDidUpdate');
+  //   const wrapper = mount(<App />);
+  //   expect(App.prototype.componentDidUpdate.callCount).toBe(1);
+  // })
+
+  // it ('Renders all child components', () => {
+  //   const wrapper = shallow(<App />);
+  //   console.log(wrapper.find(PhotoList));
+  // });
 })
