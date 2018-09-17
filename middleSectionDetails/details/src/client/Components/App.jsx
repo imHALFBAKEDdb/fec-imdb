@@ -29,6 +29,7 @@ export default class App extends React.Component {
     };
     axios(options)
       .then(results => {
+        console.log(results);
         this.setState({
           currentMovie: results.data,
         });

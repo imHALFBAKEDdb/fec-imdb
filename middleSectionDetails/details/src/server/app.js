@@ -19,12 +19,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/movie/:movieId', (req, res) => {
-  // console.log(req.params);
   // res.send('send back movie page');
+  const { movieId } = req.params;
   
-  models.getMovie(req.params.movieId)
-  .then(result => res.send(JSON.stringify(result)))
-  .catch(err => res.send(JSON.stringify(err)));
+  models.getMovie(movieId)
+    .then(result => res.send(JSON.stringify(result)))
+    .catch(err => res.send(JSON.stringify(err)));
 });
 
 // post route for section edits

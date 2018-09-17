@@ -15,7 +15,7 @@ async function createMovie(movieData) {
 
 async function deleteMovie(movieId) {
   try {
-    const result = await Movie.deleteOne({ id : movieId })
+    const result = await Movie.deleteOne({ id : movieId });
     return result;
   } catch(err) {
     return err;
@@ -24,7 +24,6 @@ async function deleteMovie(movieId) {
 
 async function getMovie(movieId) {
   // find movie by id 
-  console.log('Getting movie id', typeof movieId, movieId);
   try {
     const result = await Movie.findOne({ id: movieId });
     return result;
@@ -35,7 +34,6 @@ async function getMovie(movieId) {
 
 async function editMovie(movieId, section, text) {
   //
-  console.log('FROM MODELS', movieId, section, text);
   try {
     const result = await Movie.findOneAndUpdate({ id: movieId }, {
       [section]: text
