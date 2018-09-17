@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line no-unused-vars
 import styles from './styles/BoxOffice.css';
 
 const BoxOffice = ({ budget, openingWeekend, gross, cumulative }) => {
@@ -25,7 +25,7 @@ const BoxOffice = ({ budget, openingWeekend, gross, cumulative }) => {
 
       <h4 className={ styles['footer-link'] }>Show more on fMDBPro</h4>
     </div>
-  )
+  );
 };
 
 export default BoxOffice;

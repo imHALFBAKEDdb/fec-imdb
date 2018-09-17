@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fMDB');
+const config = require('../config/config');
+
+const { host, port, name } = config.db;
+
+mongoose.connect(`mongodb://${host}:${port}/${name}`);
 
 const db = mongoose.connection;
 db.once('open', () => {

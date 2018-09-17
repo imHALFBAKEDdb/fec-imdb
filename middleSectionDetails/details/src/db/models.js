@@ -31,7 +31,7 @@ async function getMovie(movieId) {
   } catch(err) {
     return err;
   }
-};
+}
 
 async function editMovie(movieId, section, text) {
   //

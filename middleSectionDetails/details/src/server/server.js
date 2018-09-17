@@ -1,5 +1,8 @@
+require('dotenv').config();
+
 const app = require('./app');
-const PORT = process.env.PORT || 1337;
+const config = require('../config/config');
+const PORT = config.app.port;
 
 app.listen(PORT, () => {
   console.log('FMDB listening on ' + PORT);

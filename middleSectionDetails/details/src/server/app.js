@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
-const db = require('../db/db');
 const models = require('../db/models');
 
 const app = express();

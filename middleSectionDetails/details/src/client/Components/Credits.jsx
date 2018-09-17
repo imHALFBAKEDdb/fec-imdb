@@ -24,7 +24,7 @@ const Credits = ({ productionCo, runtime, soundMix, color, aspectRatio }) => {
         <h4 className={ styles['keyword-heading'] }>Aspect Ratio: { aspectRatio } </h4>
       </div>
     </div>
-  )
+  );
 };
 
 export default Credits;
