@@ -14,13 +14,13 @@ it("MovieList should render without crashing", () => {
   ReactDOM.render(<MovieList />, div);
 });
 
-// it("MovieEntry should render without crashing", () => {
-//   const div = document.createElement("div");
-//   ReactDOM.render(<MovieEntry />, div);
-// });
+it("MovieEntry should render without crashing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(<MovieEntry movie={"title"}/>, div);
+});
 
-// it("Each entry should animate when hover over it", async () => {
-//   const wrapper = await shallow(<MovieEntry />);
-//   wrapper.find(".entry").simulate("hover");
-//   expect(wrapper.find(".entry")).toBeTruthy();
-// });
+it("Each entry should animate when hover over it", () => {
+  const wrapper = shallow(<MovieEntry movie={"title"}/>);
+  wrapper.find(".entry").simulate("hover");
+  expect(wrapper.find(".entry")).toBeTruthy();
+});
