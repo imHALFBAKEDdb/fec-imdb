@@ -3,8 +3,9 @@ const config = require('../config/config');
 
 const { host, port, name } = config.db;
 
-// mongoose.connect(`mongodb://${host}:${port}/${name}`);
-mongoose.connect('mongodb://localhost/fMDB');
+mongoose.connect(`mongodb://${host}:${port}/${name}`);
+// mongoose.connect(`mongodb://${host}:${port}`);
+// mongoose.connect('mongodb://localhost/fMDB');
 
 const db = mongoose.connection;
 db.once('open', () => {
