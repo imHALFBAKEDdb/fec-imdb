@@ -24,6 +24,7 @@ class MovieList extends React.Component {
       for(let i = 0; i < 10; i++){
         let n = Math.floor((Math.random() * 100));
         random.push(movies[n]);
+        movies.splice(n, 1);
       }
       this.setState({
         data: random
