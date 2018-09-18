@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const config = require('../config/config');
-
+console.log(config);
 const { host, port, name } = config.db;
 
 mongoose.connect(`mongodb://${host}:${port}/${name}`);

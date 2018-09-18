@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -12,10 +14,11 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger);
-app.use(express.static(path.join(__dirname, '/../../dist')))
+app.use(express.static(path.join(__dirname, '/../../dist')));
+app.use(express.static(path.join(__dirname, '../client/public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/../../dist/index.html'));
+  res.sendFile(path.join(__dirname, '/../client/public/index.html'));
 });
 
 app.get('/api/movie/:movieId', (req, res) => {
@@ -53,7 +56,7 @@ app.get('/api/review/:reviewId', (req, res) => {
     .catch(err => {
       console.log(err);
       res.send(JSON.stringify(err));
-    })
+    });
 });
 
 module.exports = app;

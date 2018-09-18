@@ -7,10 +7,11 @@
     "test": "jest",
     "react:dev": "webpack --mode development --watch",
     "server:dev": "webpack-dev-server --open --mode development",
-    "build:dev": "webpack --mode development --watch",
-    "build:prod": "webpack --mode production",
-    "start": "nodemon",
-    "load": "node ./src/db/utils/loadData.js"
+    "build:dev": "webpack --mode development --config webpack.dev.js --watch",
+    "build:prod": "webpack --mode production --config webpack.prod.js",
+    "start": "node ./src/server/server.js",
+    "load": "node ./src/db/utils/loadData.js",
+    "nodemon": "nodemon"
   },
   "repository": {
     "type": "git",
