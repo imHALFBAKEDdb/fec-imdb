@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import FAQ from '../FAQ';
 import KeyWord from '../KeyWord';
 
-const testMovieData =  require('../../db/mockdata/mockMovieData.json')[0];
+const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
 describe('<FAQ />', () => {
   const { faq } = testMovieData;

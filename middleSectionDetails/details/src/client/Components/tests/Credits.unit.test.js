@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import Credits from '../Credits';
 import KeyWord from '../KeyWord';
 
-const testMovieData =  require('../../db/mockdata/mockMovieData.json')[0];
+const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
 describe('<Credits />', () => {
   const { productionCo, runtime, soundMix, color, aspectRatio } = testMovieData;

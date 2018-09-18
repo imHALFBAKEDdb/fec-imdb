@@ -31,7 +31,7 @@ describe('db models', () => {
       .then(result => {
         console.log(result.id);
         expect(result).toBeTruthy();
-        expect(result.id).toEqual('1000000');
+        expect(result.id).toEqual(1000000);
         done();
       })
   });
@@ -52,7 +52,7 @@ describe('db models', () => {
     getMovieReview(testMovieReviewData.id)
       .then(result => {
         expect(result).toBeTruthy();
-        expect(result.id).toEqual('2000000');
+        expect(result.id).toEqual(2000000);
         done();
       })
   });

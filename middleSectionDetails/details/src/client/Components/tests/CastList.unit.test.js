@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import CastList from '../CastList';
 import CastListItem from '../CastListItem';
-const testMovieData =  require('../../db/mockdata/mockMovieData.json')[0];
+const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
 describe('<CastList />', () => {
   const wrapper = shallow(

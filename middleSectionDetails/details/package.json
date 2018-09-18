@@ -83,7 +83,7 @@
       "!**/dist/**"
     ],
     "coverageThreshold": {
-      "./src/Components": {
+      "./src/client/Components": {
         "statements": 65
       },
       "./src/db/": {

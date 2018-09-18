@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import DidYouKnow from '../DidYouKnow';
 import KeyWord from '../KeyWord';
 
-const testMovieData =  require('../../db/mockdata/mockMovieData.json')[0];
+const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
 describe('<DidYouKnow />', () => {
   const { trivia, goofs, quotes, crazyCredits, connections, soundtracks } = testMovieData;

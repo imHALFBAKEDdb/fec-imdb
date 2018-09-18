@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import KeyWord from '../KeyWord';
 
-const testMovieData =  require('../../db/mockdata/mockMovieData.json')[0];
+const testMovieData =  require('../../../db/mockdata/mockMovieData.json')[0];
 
 describe('<KeyWord />', () => {
   it('renders a keyword with a .divider if not the last item in a list of keywords (index equals length)', () => {
