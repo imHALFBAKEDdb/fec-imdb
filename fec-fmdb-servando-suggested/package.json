@@ -57,6 +57,9 @@
     "css-loader": "^1.0.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "grunt": "^1.0.3",
+    "grunt-aws-s3": "^2.0.0",
     "jest": "^23.6.0",
     "style-loader": "^0.23.0"
   }

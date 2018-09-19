@@ -17,7 +17,7 @@ class MovieList extends React.Component {
   }
 
   fetchAll() {
-    axios.get("/movie/suggested").then(data => {
+    axios.get("http://localhost:8080/movie/suggested").then(data => {
       console.log("Data fetched:", data);
       let movies = data.data;
       let random = [];
