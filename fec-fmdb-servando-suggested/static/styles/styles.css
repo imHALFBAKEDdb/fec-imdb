@@ -1,5 +1,5 @@
 :local(.container) {
-  width: 326px;
+  width: 335px;
   border: 1.5px solid grey;
 }
 
@@ -18,7 +18,7 @@
 
 :local(.entry) {
   display: flex;
-  width: 150px;
+  width: 155px;
   height: 120px;
   flex-direction: column;
   border: 1px solid grey;
