@@ -12,7 +12,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use("/movie", router);
+app.use("/suggested/api", router);
 
 app.listen(PORT, () => {
   console.log("Module listening in port:", PORT);
