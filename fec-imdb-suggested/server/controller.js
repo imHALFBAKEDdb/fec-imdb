@@ -7,7 +7,7 @@ module.exports = {
       if (error) {
         res.status(404).send(error);
       } else {
-        res.status(200).send(data);
+        res.send(JSON.stringify(data));
       }
     });
   }

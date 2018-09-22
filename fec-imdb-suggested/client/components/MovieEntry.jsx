@@ -4,10 +4,10 @@ import styles from "../../static/styles/styles.css";
 const MovieEntry = props => {
   return (
     <div className={styles.entry}>
-      <a className={styles.entrytitle} href="" >{props.movie.title}</a>
-      <a className={styles.entryyear}>{props.movie.year}</a>
+      <a className={styles.entrytitle} href="" >{props.movie.Title}</a>
+      <a className={styles.entryyear}>{props.movie.Year}</a>
       {/* Add url link when clicking in image. Ex: href={props.movie.url} */}
-      <img src={props.movie.poster} className={styles.entryimage} />
+      <img src={props.movie.Poster} className={styles.entryimage} />
     </div>
   );
 };

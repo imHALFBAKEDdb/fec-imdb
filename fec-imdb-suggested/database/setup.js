@@ -1,14 +1,14 @@
 const { Movie } = require("./model.js");
-const { movies } = require("./data.js");
+const data = require("./data.json");
 const { db } = require("./index.js");
 
 let insertInDB = data => {
   data.forEach(mov => {
     new Movie({
       id: mov.imdbID,
-      title: mov.Title,
-      year: mov.Year,
-      poster: mov.Poster
+      Title: mov.Title,
+      Year: mov.Year,
+      Poster: mov.Poster
     })
       .save()
       .then(() => {
@@ -20,4 +20,4 @@ let insertInDB = data => {
   });
 };
 
-insertInDB(movies);
+insertInDB(data);
