@@ -7,35 +7,35 @@
 //   Poster: String
 // });
 
-// let Movie = mongoose.model("Movie", movieSchema);
+// let movies = mongoose.model("movies", movieSchema);
 
 const Sequelize = require("sequelize");
 const connection = require("./index.js");
 
-const Movies = connection.define(
-  "Movies",
+const movies = connection.define(
+  "movies",
   {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       allowNull: false
     },
-    Title: {
+    title: {
       type: Sequelize.TEXT,
       allowNull: false
     },
-    Year: {
+    year: {
       type: Sequelize.TEXT,
       allowNull: false
     },
-    Poster: {
+    poster: {
       type: Sequelize.TEXT,
       allowNull: false
-    },
+    }
   },
   { timestamps: false }
 );
 
-connection.sync({ force: false }); //remove force: false after initial schema is finalized
+connection.sync({ force: false });
 
-module.exports.Movies = Movies;
+module.exports.movies = movies;

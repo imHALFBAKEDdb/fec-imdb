@@ -6,9 +6,9 @@ let insertInDB = data => {
   data.forEach(mov => {
     new Movie({
       id: mov.imdbID,
-      Title: mov.Title,
-      Year: mov.Year,
-      Poster: mov.Poster
+      title: mov.title,
+      year: mov.year,
+      poster: mov.poster
     })
       .save()
       .then(() => {

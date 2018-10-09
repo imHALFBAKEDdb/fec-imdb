@@ -1,6 +1,6 @@
 // const mongoose = require("mongoose");
 // mongoose.connect(
-//   "mongodb://mongo:27017/test",
+//   "mongodb://localhost/movies",
 //   { useNewUrlParser: true }
 // );
 
@@ -29,4 +29,3 @@ connection
   .catch(err => console.log("Error connecting to the database...", err));
 
 module.exports = connection;
-
