@@ -18,17 +18,14 @@ class MovieList extends React.Component {
 
   fetchAll() {
     axios.get(`/suggested/api/s`).then(data => {
-      console.log("Data fetched:", data);
-      let movies = data.data;
-      let random = [];
-      console.log(movies);
-      for(let i = 0; i < 10; i++){
-        let n = Math.floor((Math.random() * 100));
-        random.push(movies[n]);
-        movies.splice(n, 1);
+      console.log("Data fetched:", data.data);
+      let moviesArray = [];
+      for (let i = 0; i < data.data.length; i++) {
+        moviesArray.push(data.data[i]);
       }
+      console.log("moviesArray", moviesArray);
       this.setState({
-        data: random
+        data: moviesArray
       });
     });
   }

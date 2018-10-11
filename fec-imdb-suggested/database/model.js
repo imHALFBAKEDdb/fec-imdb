@@ -38,4 +38,4 @@ const movies = connection.define(
 
 connection.sync({ force: false });
 
-module.exports.movies = movies;
+module.exports = movies;
