@@ -1,18 +1,4 @@
 const movies = require("./model.js");
-const Sequelize = require("sequelize");
-
-let retrieve10random = callback => {
-  console.log("IN retrieve10random ...");
-  movies
-    .findAll({ limit: 10 })
-    .then(data => {
-      console.log("whats sent to client", data);
-      callback(null, data);
-    })
-    .catch(error => {
-      callback(error, null);
-    });
-};
 
 let createMovie = (body, callback) => {
   movies
@@ -68,7 +54,6 @@ let deleteMovie = (body, callback) => {
     });
 };
 
-module.exports.retrieve10random = retrieve10random;
 module.exports.createMovie = createMovie;
 module.exports.updateMovie = updateMovie;
 module.exports.deleteMovie = deleteMovie;

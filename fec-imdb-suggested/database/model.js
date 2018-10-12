@@ -31,6 +31,10 @@ const movies = connection.define(
     poster: {
       type: Sequelize.TEXT,
       allowNull: false
+    },
+    index: {
+      type: Sequelize.INTEGER,
+      allowNull: false
     }
   },
   { timestamps: false }

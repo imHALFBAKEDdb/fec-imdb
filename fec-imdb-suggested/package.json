@@ -49,6 +49,7 @@
     "faker": "^4.1.0",
     "identity-obj-proxy": "^3.0.0",
     "mongoose": "^5.2.8",
+    "newrelic": "^4.9.0",
     "nodemon": "^1.18.4",
     "performance-now": "^2.1.0",
     "pg": "^7.4.3",

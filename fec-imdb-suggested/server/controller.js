@@ -1,15 +1,24 @@
 const dbcontroller = require("../database/controller.js");
+const movies = require("../database/model.js");
 
 module.exports = {
   get: (req, res) => {
     console.log("In GET...");
-    dbcontroller.retrieve10random((error, data) => {
-      if (error) {
-        res.status(404).send(error);
-      } else {
-        res.send(JSON.stringify(data));
-      }
-    });
+    let index = req.params.index.slice(1);
+    console.log(index);
+    movies
+      .findAll({
+        where: {
+          index: index
+        }
+      })
+      .then(data => {
+        console.log("whats sent to client", data);
+        res.status(200).send(data);
+      })
+      .catch(err => {
+        res.status(404).send(err);
+      });
   },
   post: (req, res) => {
     console.log("In POST...");

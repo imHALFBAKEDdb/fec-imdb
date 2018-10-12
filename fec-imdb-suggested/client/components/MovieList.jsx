@@ -10,14 +10,19 @@ class MovieList extends React.Component {
       data: []
     };
     this.fetchAll = this.fetchAll.bind(this);
+    this.randomIndex = this.randomIndex.bind(this);
   }
 
   componentDidMount() {
     this.fetchAll();
   }
 
+  randomIndex() {
+    return Math.floor(Math.random() * (1000000 - 1) + 1);
+  }
+
   fetchAll() {
-    axios.get(`/suggested/api/s`).then(data => {
+    axios.get(`/suggested/api/s/:${this.randomIndex()}`).then(data => {
       console.log("Data fetched:", data.data);
       let moviesArray = [];
       for (let i = 0; i < data.data.length; i++) {

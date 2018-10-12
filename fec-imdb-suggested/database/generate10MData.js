@@ -22,10 +22,15 @@ const writer = fs.createWriteStream("10MData.tsv");
 //   }
 // }
 
-let i = 1;
+let i = 0;
+let count = 0;
+let index = 1;
 
 const fakeDataGenerator = () => {
-  return `${i}\t${faker.random.words()}\t${faker.date.past()}\t${faker.random.image()}\n`;
+  console.log("id:", i, "index:", index, "count", count);
+  return `${i}\t${faker.random.words()}\t${faker.date.past()}\t${`https://picsum.photos/182/268/?image=${Math.floor(
+    Math.random() * 1000
+  )}`}\t${index}\n`;
 };
 
 let start = time();
@@ -33,6 +38,12 @@ write();
 function write() {
   let ok = true;
   do {
+    if (count !== 10) {
+      count++;
+    } else if (count === 10) {
+      count = 1;
+      index++;
+    }
     i++;
     if (i === 10000000) {
       writer.write(fakeDataGenerator(), "utf8", () => {
