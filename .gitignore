@@ -4,3 +4,9 @@ package-lock.json
 node_modules
 coverage
 config.js
+10MData.tsv
+testGet.yml
+testPost.yml
+newrelic.js
+newrelic_agent.log
+coverage
