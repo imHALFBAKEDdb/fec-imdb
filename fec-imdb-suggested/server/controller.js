@@ -4,7 +4,7 @@ const movies = require("../database/model.js");
 module.exports = {
   get: (req, res) => {
     console.log("In GET...");
-    let index = req.params.index.slice(1);
+    let index = Number(req.params.index.slice(1));
     console.log(index);
     movies
       .findAll({
@@ -17,15 +17,17 @@ module.exports = {
         res.status(200).send(data);
       })
       .catch(err => {
+        console.log(err);
         res.status(404).send(err);
       });
   },
   post: (req, res) => {
     console.log("In POST...");
     console.log("req.body", req.body);
-    dbcontroller.createMovie(req.body, (error, data) => {
-      if (error) {
-        res.status(404).send(error);
+    dbcontroller.createMovie(req.body, (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(404).send(err);
       } else {
         res.send(JSON.stringify(data));
       }
@@ -33,9 +35,10 @@ module.exports = {
   },
   put: (req, res) => {
     console.log("In UPDATE...");
-    dbcontroller.updateMovie(req.body, (error, data) => {
-      if (error) {
-        res.status(404).send(error);
+    dbcontroller.updateMovie(req.body, (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(404).send(err);
       } else {
         res.send(JSON.stringify(data));
       }
@@ -43,9 +46,10 @@ module.exports = {
   },
   delete: (req, res) => {
     console.log("In DELETE...");
-    dbcontroller.deleteMovie(req.body, (error, data) => {
-      if (error) {
-        res.status(404).send(error);
+    dbcontroller.deleteMovie(req.body, (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(404).send(err);
       } else {
         res.send(JSON.stringify(data));
       }
