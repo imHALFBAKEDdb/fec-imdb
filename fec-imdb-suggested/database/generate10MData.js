@@ -1,7 +1,7 @@
 const faker = require("faker");
 const fs = require("fs");
 const time = require("performance-now");
-const writer = fs.createWriteStream("10MData.tsv");
+const writer = fs.createWriteStream("20KData.csv");
 
 // const fakeDataGenerator = () => {
 //   data = {
@@ -22,15 +22,13 @@ const writer = fs.createWriteStream("10MData.tsv");
 //   }
 // }
 
-let i = 0;
+let i = 11000000;
 let count = 0;
-let index = 1;
+let index = 11000000;
 
 const fakeDataGenerator = () => {
   console.log("id:", i, "index:", index, "count", count);
-  return `${i}\t${faker.random.words()}\t${faker.date.past()}\t${`https://picsum.photos/182/268/?image=${Math.floor(
-    Math.random() * 1000
-  )}`}\t${index}\n`;
+  return `${i},${faker.random.words()},${faker.date.past()},${`https://picsum.photos/182/268/?random`},${index}\n`;
 };
 
 let start = time();
@@ -45,7 +43,7 @@ function write() {
       index++;
     }
     i++;
-    if (i === 10000000) {
+    if (i === 11020000) {
       writer.write(fakeDataGenerator(), "utf8", () => {
         console.log("created data entry", i);
         console.log((time() - start) / 1000);
